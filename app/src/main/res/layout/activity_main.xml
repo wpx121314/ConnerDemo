@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:clickable="true"
+        android:background="@drawable/apk_all_white_selector_1"
+        android:padding="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="roundWithOverlayColor方式" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/my_image_view_1"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            fresco:roundedCornerRadius="10dp"
+            fresco:placeholderImage="@color/colorAccent"
+            fresco:roundWithOverlayColor="@color/cover_conner_color" />
+    </LinearLayout>
+
+    <com.example.wupeixin.connerdemo.StateAttachLinearLayout
+        android:layout_marginTop="15dp"
+        android:id="@+id/state_attach_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:clickable="true"
+        android:background="@drawable/apk_all_white_selector_1"
+        android:padding="15dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="这是自定义方式" />
+
+        <com.example.wupeixin.connerdemo.SelectRadiusLoaderImageView
+            android:id="@+id/my_image_view"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            fresco:placeholderImage="@color/colorAccent" />
+
+    </com.example.wupeixin.connerdemo.StateAttachLinearLayout>
+
+</LinearLayout>
